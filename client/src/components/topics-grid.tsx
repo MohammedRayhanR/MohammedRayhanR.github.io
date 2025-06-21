@@ -34,13 +34,13 @@ export default function TopicsGrid() {
   };
 
   return (
-    <section id="topics" className="py-20 bg-slate-50">
+    <section id="topics" className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-16" {...fadeInUp}>
-          <h2 className="text-4xl font-bold text-slate-800 mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Complete Learning Path
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             14 comprehensive topics covering all aspects of server-side engineering fundamentals.
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ export default function TopicsGrid() {
             return (
               <motion.div
                 key={topic.id}
-                className="topic-card bg-white rounded-xl shadow-sm border border-slate-200 p-6 cursor-pointer"
+                className={`topic-card bg-slate-800 rounded-xl shadow-lg border p-6 cursor-pointer topic-${topic.id}`}
                 variants={fadeInUp}
                 {...scaleOnHover}
                 onClick={() => handleTopicClick(topic.id)}
@@ -65,8 +65,8 @@ export default function TopicsGrid() {
                 <div className={`w-12 h-12 ${topic.iconBg} rounded-lg flex items-center justify-center mb-4`}>
                   <IconComponent className={`${topic.iconColor} text-2xl`} size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{topic.title}</h3>
-                <p className="text-slate-600 mb-4">{topic.intro}</p>
+                <h3 className="text-xl font-semibold mb-3 text-white">{topic.title}</h3>
+                <p className="text-slate-300 mb-4">{topic.intro}</p>
                 <div className="flex items-center text-primary font-medium">
                   <span>Learn More</span>
                   <ArrowRight className="ml-2" size={16} />

@@ -93,9 +93,18 @@ ServerEd is a comprehensive educational platform designed to teach server-side e
 - **Production**: `npm run build && npm run start`
 - **Database**: `npm run db:push` deploys schema changes
 
+## Recent Changes
+- June 21, 2025: Major dark theme implementation with topic-specific backgrounds
+- Enhanced topic data with comprehensive content for all 14 server-side engineering topics
+- Added topic-specific gradient backgrounds and improved visual hierarchy
+- Updated all components (navigation, footer, modals, pages) for consistent dark styling
+- Expanded educational content with detailed subtopics, mnemonics, and code examples
+
 ## Changelog
 - June 21, 2025. Initial setup
+- June 21, 2025. Dark theme implementation and content enhancement
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preference: Dark theme with topic-specific visual backgrounds for enhanced learning experience.
