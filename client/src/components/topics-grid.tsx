@@ -30,6 +30,8 @@ export default function TopicsGrid() {
   const topics = getAllTopics();
 
   const handleTopicClick = (topicId: string) => {
+    // Scroll to top immediately when navigating
+    window.scrollTo(0, 0);
     setLocation(`/topic/${topicId}`);
   };
 

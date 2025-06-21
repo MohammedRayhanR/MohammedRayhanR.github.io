@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft, Info, Star, Rocket, Lightbulb, ChevronRight } from "lucide-react";
@@ -17,6 +17,11 @@ export default function Topic() {
   
   const [selectedSubtopic, setSelectedSubtopic] = useState<TopicSubtopic | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Scroll to top when component mounts or topicId changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [topicId]);
 
   if (!topic) {
     return (
